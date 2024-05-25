@@ -33,12 +33,12 @@ class CNNWrapper(nn.Module):
                       checkpoint_path):
         """Helper to initialize a pretrained pytorch model.
         """
-        if self.backbone == 'resnet50':
-            model = resnet.resnet50(pretrained=False)   # Use Caffe ResNet instead
+        if self.backbone == 'resnet101':
+            model = resnet.resnet101(pretrained=False)   # Use Caffe ResNet instead
             model.load_state_dict(torch.load(checkpoint_path))
 
-        elif self.backbone == 'resnet101':
-            model = resnet.resnet101(pretrained=False)
+        elif self.backbone == 'resnet50':
+            model = resnet.resnet50(pretrained=False)
             model.load_state_dict(torch.load(checkpoint_path))
 
         elif self.backbone == 'resnet152':
