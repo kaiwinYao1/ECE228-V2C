@@ -65,7 +65,7 @@ def extract(dataset_path,
 def main_iit_v2c():
     # Parameters
     config = FEConfig()
-    model_names = ['resnet50']
+    model_names = ['resnet101']
 
     annotation_files = ['train.txt', 'test.txt']
     for annotation_file in annotation_files:
