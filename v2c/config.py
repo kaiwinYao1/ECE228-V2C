@@ -2,7 +2,7 @@ import numpy as np
 import os
 import multiprocessing
 
-from image_encoder_selection import IMAGE_ENCODER_SELECTION
+from v2c.image_encoder_selection import IMAGE_ENCODER_SELECTION
 
 # Base Configuration Class
 # Don't use this class directly. Instead, sub-class it and override
