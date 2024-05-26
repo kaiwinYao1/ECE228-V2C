@@ -99,3 +99,22 @@ def resnet152(pretrained=False):
     if pretrained:
         model.load_state_dict(model_zoo.load_url(model_urls['resnet152']))
     return model
+
+def efficientnet_b0(pretrained=False):
+    """Constructs an EfficientNet-B0 model.
+
+    Args:
+        pretrained (bool): If True, returns a model pre-trained on ImageNet
+    """
+    model = models.efficientnet_b0(pretrained=pretrained)
+    return model
+
+
+def mobilenet_v2(pretrained=False):
+    """Constructs a MobileNetV2 model.
+
+    Args:
+        pretrained (bool): If True, returns a model pre-trained on ImageNet
+    """
+    model = models.mobilenet_v2(pretrained=pretrained)
+    return model
