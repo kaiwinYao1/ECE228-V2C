@@ -2,6 +2,8 @@ import numpy as np
 import os
 import multiprocessing
 
+from image_encoder_selection import IMAGE_ENCODER_SELECTION
+
 # Base Configuration Class
 # Don't use this class directly. Instead, sub-class it and override
 # the configurations you need to change.
@@ -39,7 +41,7 @@ class Config(object):
     # --------------------
     # Model hyperparameters
     # Backbone & num_features used for feature extraction
-    BACKBONE = {'resnet101': 2048}
+    BACKBONE = {IMAGE_ENCODER_SELECTION: 2048}
 
     # Unit size for LSTM, Dense
     UNITS = 512
