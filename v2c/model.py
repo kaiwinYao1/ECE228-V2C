@@ -51,6 +51,14 @@ class CNNWrapper(nn.Module):
         elif self.backbone == 'vgg19':
             model = models.vgg19(pretrained=True)
 
+        elif self.backbone == 'efficientnet_b0':
+            model = efficientnet_b0(pretrained=True)
+            model.load_state_dict(torch.load(checkpoint_path))
+
+        elif self.backbone == 'mobilenet_v2':
+            model = mobilenet_v2(pretrained=True)
+            model.load_state_dict(torch.load(checkpoint_path))
+
         # Remove the last classifier layer
         modules = list(model.children())[:-1]
         model = nn.Sequential(*modules)
