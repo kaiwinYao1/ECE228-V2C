@@ -6,6 +6,8 @@ import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
 
+from v2c.image_encoder_selection import IMAGE_ENCODER_SELECTION
+
 # Root directory of the project
 ROOT_DIR = os.path.abspath("../../")
 
@@ -65,7 +67,7 @@ def extract(dataset_path,
 def main_iit_v2c():
     # Parameters
     config = FEConfig()
-    model_names = ['resnet101']
+    model_names = [IMAGE_ENCODER_SELECTION]
 
     annotation_files = ['train.txt', 'test.txt']
     for annotation_file in annotation_files:
